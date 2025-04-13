@@ -1,0 +1,156 @@
+body  {
+    background-color: #FEBA4F;
+}
+
+.index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+* {
+    font-family: "Josefin Sans";
+}
+
+.index-h1 {
+    font-size: 7rem;
+    margin-bottom: 10px;
+    margin-top: 0.75rem;
+    font-family: "New Times Roman";
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to top left, orange, darkorange, orangered, red);
+}
+
+.index-p {
+    font-size: 1.5rem;
+    margin-top: 0;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to top left, orange, darkorange, orangered, red 50%);
+}
+
+.index-a {
+    text-decoration: none;
+    padding: 20px 40px;
+    font-size: 2rem;
+    border: 2px solid red;
+    color: red;
+    border-radius: 10px;
+    transition: all 0.3s;
+    margin-top: 115px;
+}
+
+.index-a:hover {
+    background-image: linear-gradient(to top left, orange, darkorange, orangered);
+    border: 2px solid #FEBA4F;
+}
+
+#sectionHeart {
+    display: flex;
+    justify-content: end;
+    font-size: 2.5rem;
+}
+
+.ques {
+    font-size: 3rem;
+    color: orangered;
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 20px !important;
+    font-size: 1.5rem;
+    border: 2px solid red;
+    color: red;
+    border-radius: 10px;
+    transition: all 0.3s;
+    margin-top: 115px;
+    background-color: #F0DC82;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: orangered !important;
+    color: white !important;
+    border: 2px solid white !important;
+}   
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 200px;
+    padding: 0 100px;
+}
+
+#major {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.end {
+    font-size: 8rem;
+}
+
+.end-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.again {
+    padding: 20px 40px;
+    font-size: 2rem;
+    background-color: #F0DC82;
+    color: orangered;
+    border-style: solid;
+    border-width: 5px;
+    border-image: conic-gradient(from var(--angle),darkorange, orangered, red, darkred, darkorange) 1;
+    border-radius: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    animation: rotate 2s linear infinite;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+@keyframes rotate {
+    from {
+
+    } to {
+        --angle: 360deg;
+    }
+}
+
+.again:hover {
+    background-color: orange;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+}
+
+@media screen and (max-width: 450px){
+    .ques {
+        font-size: 2rem;
+    }
+
+    .buttons {
+        column-gap: 50px;
+    }
+
+    .btn3, .btn4 {
+        transform: translateY(-50px);
+    }
+}
